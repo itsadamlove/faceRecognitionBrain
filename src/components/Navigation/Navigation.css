@@ -1,9 +1,9 @@
-.Navigation__signOut {
+.Navigation__container {
   display: flex;
   justify-content: flex-end;
 }
 
-.Navigation__signOutLink {
+.Navigation__link {
   font-size: 20px;
   color: white;
   text-decoration: underline;
@@ -13,7 +13,7 @@
   padding: 16px;
   font-weight: 300;
 }
-.Navigation__signOutLink:hover {
+.Navigation__link:hover {
   opacity: 1;
 }
 
