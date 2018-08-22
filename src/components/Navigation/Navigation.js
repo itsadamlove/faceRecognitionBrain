@@ -5,7 +5,7 @@ const Navigation = ({onRouteChange, isSignedIn}) => {
   if (isSignedIn) {
     return (
       <nav className="Navigation__container">
-        <p onClick={() => onRouteChange("login")} className='Navigation__link'>Log Out</p>
+        <p onClick={() => onRouteChange("signout")} className='Navigation__link'>Log Out</p>
       </nav>
     )
   } else {

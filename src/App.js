@@ -14,24 +14,26 @@ const app = new Clarifai.App({
   apiKey: '308a78191427468988203e5f4e334e8b'
 })
 
+const initialState = {
+  input: '',
+  imageUrl: '',
+  box: {},
+  route: 'login',
+  isSignedIn: false,
+  user: {
+    id: '',
+      name: '',
+      email: '',
+      entries: 0,
+      joined: ''
+  }
+}
+
 class App extends Component {
 
   constructor() {
     super()
-    this.state = {
-      input: '',
-      imageUrl: '',
-      box: {},
-      route: 'login',
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        email: '',
-        entries: 0,
-        joined: ''
-      }
-    }
+    this.state = initialState
   }
 
   loadUser = (data) => {
@@ -69,12 +71,17 @@ class App extends Component {
     this.setState({box: box})
   }
 
+  resetFaceBox = () => {
+    this.setState({box: 0})
+  }
+
   onInputChange = (e) => {
     this.setState({input: e.target.value})
   }
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
+    this.resetFaceBox()
 
     app.models
       .predict(
@@ -101,8 +108,8 @@ class App extends Component {
   }
 
   onRouteChange = (route) => {
-    if (route === 'login') {
-      this.setState({isSignedIn: false})
+    if (route == 'signout') {
+      this.setState(initialState)
     } else if (route === 'home') {
       this.setState({isSignedIn: true})
     }
