@@ -1,0 +1,19 @@
+.Navigation__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Navigation__link {
+  font-size: 20px;
+  color: white;
+  text-decoration: underline;
+  transition: opacity .15s ease-in;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 16px;
+  font-weight: 300;
+}
+.Navigation__link:hover {
+  opacity: 1;
+}
+

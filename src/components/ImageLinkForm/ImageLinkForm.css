@@ -1,0 +1,47 @@
+.ImageLinkForm__container {
+  padding: 16px;
+}
+
+.Caption {
+  color: #E3E9ED;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.FormContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.FormWrapper {
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.Form__input {
+  margin: auto;
+  padding: 10px;
+  margin-right: 0px;
+  flex-grow: 1;
+  outline: none;
+  width: calc(100% - 80px);
+  border: none;
+}
+
+
+.Form__button {
+  height: 100%;
+  width: 80px;
+  background-color: #34495e;
+  transition: background-color 0.25s ease-out;
+  cursor: pointer;
+  padding: 0;
+  color: #E3E9ED;
+  border: none;
+  font-weight: 300;
+  /*padding: 8px 20px 8px 20px;*/
+}

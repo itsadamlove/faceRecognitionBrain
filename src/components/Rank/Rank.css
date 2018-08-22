@@ -1,0 +1,10 @@
+.RankText {
+  color: #E3E9ED;
+  font-size: 20px;
+  font-weight: 300;
+}
+.RankText--large {
+  color: #E3E9ED;
+  font-size: 26px;
+  font-weight: 600;
+}
