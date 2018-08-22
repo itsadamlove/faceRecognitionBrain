@@ -45,7 +45,7 @@ class App extends Component {
   }
 
   //componentDidMount() {
-    //fetch('http://localhost:3000/')
+  //fetch('https://afternoon-lowlands-41569.herokuapp.com')
       //.then(response => response.json())
       //.then(data => console.log(data))
   //}
@@ -79,7 +79,7 @@ class App extends Component {
     this.setState({imageUrl: this.state.input})
     this.resetFaceBox()
 
-      fetch('http://localhost:3000/imageurl', {
+    fetch('https://afternoon-lowlands-41569.herokuapp.com', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -89,7 +89,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://afternoon-lowlands-41569.herokuapp.com', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
